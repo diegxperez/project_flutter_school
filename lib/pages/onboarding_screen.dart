@@ -3,6 +3,7 @@ import 'package:flutter_school/pages/home_page.dart';
 import 'package:flutter_school/intro_screens/intro_page_1.dart';
 import 'package:flutter_school/intro_screens/intro_page_2.dart';
 import 'package:flutter_school/intro_screens/intro_page_3.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class OnBoardingScreen extends StatefulWidget {
@@ -49,10 +50,19 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                     onTap: () {
                       pageindicator.jumpToPage(2);
                     },
-                    child: const Text('Skip')),
+                    child: Text(
+                      'Skip',
+                      style: GoogleFonts.poppins(
+                          color: Colors.white, fontSize: 15),
+                    )),
 
                 //dot indicator
-                SmoothPageIndicator(controller: pageindicator, count: 3),
+                SmoothPageIndicator(
+                    controller: pageindicator,
+                    count: 3,
+                    effect: JumpingDotEffect(
+                        activeDotColor: Colors.white,
+                        dotColor: Colors.grey.shade400)),
 
                 //next or done
 
@@ -68,7 +78,9 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                             ),
                           );
                         },
-                        child: const Text('Done'),
+                        child: Text('Done',
+                            style: GoogleFonts.poppins(
+                                color: Colors.white, fontSize: 15)),
                       )
                     : GestureDetector(
                         onTap: () {
@@ -76,7 +88,9 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                               duration: const Duration(milliseconds: 500),
                               curve: Curves.easeIn);
                         },
-                        child: const Text('Next')),
+                        child: Text('Next',
+                            style: GoogleFonts.poppins(
+                                color: Colors.white, fontSize: 15))),
               ],
             ),
           ),

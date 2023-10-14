@@ -24,13 +24,14 @@ class LoginPage extends StatelessWidget {
               ),
 
               //logo
-              const Icon(
-                Icons.lock,
-                size: 100,
-              ),
+              //const Icon(
+              // Icons.lock,
+              //  size: 100,
+              //),
+              Image.asset('lib/images/logo.png',height: 100,),
 
               const SizedBox(
-                height: 50,
+                height: 30,
               ),
 
               //text
@@ -63,7 +64,7 @@ class LoginPage extends StatelessWidget {
               ),
 
               const SizedBox(
-                height: 10,
+                height: 20,
               ),
 
               Padding(
@@ -91,7 +92,7 @@ class LoginPage extends StatelessWidget {
               ),
 
               const SizedBox(
-                height: 55,
+                height: 40,
               ),
 
               // or continue with
@@ -122,7 +123,7 @@ class LoginPage extends StatelessWidget {
               ),
 
               const SizedBox(
-                height: 50,
+                height: 40,
               ),
 
               // google and apple
@@ -143,7 +144,7 @@ class LoginPage extends StatelessWidget {
               ),
 
               const SizedBox(
-                height: 50,
+                height: 40,
               ),
 
               Row(
