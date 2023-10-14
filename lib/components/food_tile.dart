@@ -27,10 +27,18 @@ class FoodTile extends StatelessWidget {
             height: 140,
           ),
 
+          const SizedBox(
+            height: 10,
+          ),
+
           //Text
           Text(
             food.name,
             style: GoogleFonts.poppins(fontSize: 20),
+          ),
+
+          const SizedBox(
+            height: 10,
           ),
 
           //price + rating
@@ -42,8 +50,8 @@ class FoodTile extends StatelessWidget {
                 //price
                 Text(
                   'S./',
-                  style: GoogleFonts.poppins(fontWeight: FontWeight.w600,
-                  color: Colors.grey[700]),
+                  style: GoogleFonts.poppins(
+                      fontWeight: FontWeight.w600, color: Colors.grey[700]),
                 ),
 
                 //rating

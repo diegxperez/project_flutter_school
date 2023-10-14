@@ -4,6 +4,7 @@ import 'package:flutter_school/components/food_tile.dart';
 import 'package:flutter_school/models/food.dart';
 import 'package:flutter_school/theme/colors.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:google_nav_bar/google_nav_bar.dart';
 
 class MenuPage extends StatefulWidget {
   const MenuPage({super.key});
@@ -43,7 +44,29 @@ class _MenuPageState extends State<MenuPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Scaffold( bottomNavigationBar: GNav(
+        backgroundColor: Colors.transparent,
+        color: Colors.grey[500],
+        activeColor: PrimaryColor,
+        gap: 20,
+          tabs: const [
+            GButton(
+              icon: Icons.home,
+              //text: 'Home',
+            ),
+            GButton(
+              icon: Icons.favorite_border,
+              //text: 'Likes',
+            ),
+            GButton(
+              icon: Icons.person,
+              //text: 'Account',
+            ),
+            GButton(
+              icon: Icons.timer,
+              //text: 'Time',
+            )
+          ]),
       backgroundColor: Colors.grey[300],
       appBar: AppBar(
         backgroundColor: Colors.transparent,
